@@ -1,0 +1,5 @@
+{
+  "id": "inc1",
+  "incident_text": "Payments API 500s spiking after deploy. p95 latency 3 seconds. Logs show db pool timeout.",
+  "expected_doc_ids": ["runbook_db_pool"]
+}

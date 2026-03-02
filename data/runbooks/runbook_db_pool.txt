@@ -1,0 +1,17 @@
+Title: DB pool timeout runbook
+Service: payments api
+
+Symptoms
+- spike in 500 errors
+- logs contain db pool timeout
+- latency increases
+
+Steps
+1 Check database connections and pool usage
+2 Increase pool size if safe
+3 Restart service if leak suspected
+4 Roll back last deploy if spike started after deploy
+
+Commands
+kubectl logs deploy payments-api
+kubectl rollout undo deploy payments-api
